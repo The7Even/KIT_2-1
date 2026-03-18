@@ -1,24 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int GetArea(int a, int b)
+void GuessNumber(int S, int M)
 {
-	return (a * b);
-}
+	string guess;
+	cout << (S + M) / 2 << " is your Number? (input First letter of Bigger, Small, Right) >> ";
+	cin >> guess;
 
-int GetArea(double a)
-{
-	return (a * a * 3);
+	if (guess == "B")
+		GuessNumber((S + M) / 2, M);
+	if (guess == "S")
+		GuessNumber(S, (S + M) / 2);
+	if (guess == "R")
+		cout << "Finished. Your Number is " << (S + M) / 2;
 }
 
 int main()
 {
-	int a; int b;
-	cout << "input 2 values, input 0 to skip one. : ";
-	cin >> a >> b;
-	
-	if (b != 0)
-		cout << "square's Area : " << GetArea(a, b);
-	else
-		cout << "circle's Area : " << GetArea(a);
+	int num;
+	cout << "Choose Number (1~100)" << endl;
+	GuessNumber(1, 100);
 }
