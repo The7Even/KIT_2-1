@@ -1,3 +1,4 @@
+// Ctor가 Constructor의 약어로 쓰인대서 그럼 Destructor는 Dtor인가 싶어서 저따위로 파일명 지어놨다.
 #include <iostream>
 using namespace std;
 
