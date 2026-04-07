@@ -18,11 +18,11 @@ public:
 	}
 
 	bool IsEmpty() {
-		return (data_[0] == NULL);
+		return (data_[0] == NULL); // 스택의 0번 값이 NULL일 경우 빈 스택이라는 의미
 	}
 
 	void Push(int x) {
-		if (maxed_ != true) {
+		if (maxed_ != true) { // 꽉차있지 않다면 값 삽입
 			data_[point_] = x;
 			if (point_ + 1 != len_) // point_가 4가 되는순간 false로 변경
 			{
@@ -39,7 +39,8 @@ public:
 	void PrintStack() {
 		cout << "스택 요소 (old => new): ";
 		int printPoint = 0;
-		while (data_[printPoint] != NULL && printPoint < len_)
+		while (data_[printPoint] != NULL && printPoint < len_) // NULL을 만나거나 스택의 끝에 도달할때까지 반복.
+//(기존에는 NULL 조건만 있었으나, 스택 범위를 벗어나도 쓰레기값이 가져와지고 NULL은 아니라 계속 불러와지는 오류가 발생함.)
 		{
 			cout << data_[printPoint] << " ";
 			printPoint++;
