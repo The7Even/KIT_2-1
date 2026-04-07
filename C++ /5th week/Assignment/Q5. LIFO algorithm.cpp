@@ -22,14 +22,18 @@ public:
 	}
 
 	void Push(int x) {
-		data_[point_] = x;
-		if (point_ + 1 != len_) // point_가 4가 되는순간 false로 변경
-		{
-			data_[point_ + 1] = NULL;
-			point_++;
+		if (maxed_ != true) {
+			data_[point_] = x;
+			if (point_ + 1 != len_) // point_가 4가 되는순간 false로 변경
+			{
+				data_[point_ + 1] = NULL;
+				point_++;
+			}
+			else
+				maxed_ = true;
 		}
 		else
-			maxed_ = true;
+			cout << "배열이 꽉 찼습니다!" << endl;
 	}
 
 	void PrintStack() {
