@@ -29,7 +29,7 @@ int main()
 }
 
 // 실제 출력값과 그에 대한 분석
-// ClassA::ClassA(3) >> obj_a1(n)에서 나온 결과
+// ClassA::ClassA(3) >> 15번 줄 obj_a1(n)에서 나온 결과
 // ClassA::ClassA() >> obj_a2가 마저 생성됨
 // ClassA::ClassA(-3) >> temp_a 결과물
 // ClassA::ClassA() >> temp_b의 결과로 classA가 2개 생성됨
