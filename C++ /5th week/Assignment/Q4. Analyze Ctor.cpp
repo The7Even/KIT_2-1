@@ -34,5 +34,5 @@ int main()
 // ClassA::ClassA(-3) >> temp_a 결과물
 // ClassA::ClassA() >> temp_b의 결과로 classA가 2개 생성됨
 // ClassA::ClassA() >> 굳이 따지자면 얘는 temp_b.obj_a2
-// ClassA::ClassB() >> temp_b의 결과로 생성된 classB의 생성자
-// ClassA::ClassB(-3) >> 마지막 main에서의 생성자 출력
+// ClassB::ClassB() >> temp_b의 결과로 생성된 classB의 생성자
+// ClassB::ClassB(3) >> 마지막 main에서의 생성자 출력
