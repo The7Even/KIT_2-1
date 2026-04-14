@@ -18,6 +18,23 @@ public:
             ary_ = NULL;
         }
     }
+    Array& operator=(const Array& ary)
+    {
+        size_ = ary.size_;
+
+        if (size_ > 0)
+        {
+            ary_ = new int[size_];
+            for (int i = 0; i < size_; i++)
+                ary_[i] = ary.ary_[i];
+        }
+        else
+        {
+            ary_ = NULL;
+        }
+
+        return (*this);
+    }
     Array(int count = 0)
     {
         size_ = count;
@@ -109,7 +126,7 @@ ostream& operator<<(ostream& out, const Array& ary) // << 연산자 오버로딩
     for (int i = 0; i < ary.size_; i++)
         out << ary.ary_[i] << " ";
 
-    out << ")" << endl;
+    out << ")";
 
     return out;
 }
@@ -124,10 +141,13 @@ int main()
     ++ary1;                              // ++ 전위 증가 연산자
     Array ary3 = ary1;                  // 복사 생성자
     Array ary4 = ary1 + ary2;           // + 연산자, 복사 생성자
+    Array ary5;
+    ary5 = ary1;                                 // 대입 연산자 (추가)
 
     cout << ary1 << endl;               // << 출력 연산자
     cout << ary2 << endl;
     cout << ary3 << endl;
     cout << ary4 << endl;
+    cout << ary5 << endl;
 
 }
