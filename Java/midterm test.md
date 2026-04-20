@@ -27,8 +27,7 @@ IntelliJ, Gradle Build Tool, Git Version Control
 자바 전용 가상머신. 동일한 실행 환경을 제공함.
 단. 머신 자체는 플랫폼에 종속적임.
 
-자바 프로그램은 main에서 실행되며,
-소스코드 이름이 파일 내에서 public class 파일명 ~으로 구현되어 있어야 함.
+#### 자바 프로그램은 main에서 실행되며, 소스코드 이름이 파일 내에서 public class 파일명 ~으로 구현되어 있어야 함.
 
 ---
 
