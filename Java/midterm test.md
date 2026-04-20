@@ -78,6 +78,7 @@ class Pt {
 
 #### 숫자 range 변경시 data loss 관련 내용
 ex) int형으로 약 10억이라는 값이 저장되어 있는데, 이걸 short로 표현하라 하면 ±32,767 정도의 범위에서 표현할 수 없음. > overflow로 인한 data loss
+
 ex) float형으로 π 값을 저장했음. 이걸 int로 바꾸면 걍 3이 되어 버림. > 소수점이 버려지며 data loss
 
 ---
@@ -143,6 +144,8 @@ switch (condition) {
 
 ### for, while, do-while 구문, 중첩반복문에 대해 몇바퀴 돌게 되는지 질문
 이거도 기본 코딩문제라 따로 정리 X
+
+굳이 설명을 붙이자면 C언어와 구조적으로 같기 때문에 C언어와 비슷하게 해석할 수 있음.
 
 ---
 
