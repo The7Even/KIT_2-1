@@ -336,3 +336,11 @@ public class Name<T> {
 }
 ```
 와 같이 형식을 외부에서 지정하게 함.
+
+굳이 예를 들자면
+```
+Name<String>;
+Name<int>;
+Name<long>;
+```
+이렇게 하면 각각 String Value, int Value, long Value가 생성되어 여러 형식에 대응되는 클래스로 활용할 수 있다.
