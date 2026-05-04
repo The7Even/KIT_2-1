@@ -18,7 +18,7 @@ protected:
 	int weight_;
 public:
 	PaperBook(string t, string a, int p, int w) : Book(t,a,p), weight_(w) {}
-	int GetPrice() { return Book::GetPrice() + 2500; }
+	int GetPrice() { return Book::GetPrice() + weight_/2; }
 	void displayInfo() { Book::displayInfo(); cout << "종이책 (무게 : " << weight_ << "g)" << endl; }
 };
 
